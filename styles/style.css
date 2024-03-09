@@ -52,13 +52,11 @@ body {
 }
 
 .header_link {
-  /* маркер через стили, хотя можно было через svg */
-  border-bottom: 1px rgb(0, 0, 0) solid;
   color: rgb(0, 0, 0);
   font-weight: 400;
   font-size: 18px;
   letter-spacing: 0.01em;
-  text-decoration: none;
+  text-underline-offset: 4px;
 }
 
 .header__link_active {
@@ -80,7 +78,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: start;
-  gap: 2px;
+  gap: 3px;
   min-width: 430px;
   margin-top: 7px;
   padding-left: 191px;
@@ -91,9 +89,8 @@ body {
 
 .header__contacts-item {
   display: block;
-  border-bottom: 1px rgb(0, 0, 0) solid;
   line-height: 21px;
-  text-decoration: none;
+  text-underline-offset: 4px;
 }
 
 .header__contacts-addr {
