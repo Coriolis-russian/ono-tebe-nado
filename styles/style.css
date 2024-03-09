@@ -1,7 +1,7 @@
 /* место для вашего кода */
 
 body {
-  /*ВРЕМЕННО НЕ ЗАБЫТЬ УДАЛИТЬ!!!*/
+  /* TODO: ВРЕМЕННО НЕ ЗАБЫТЬ УДАЛИТЬ!!!*/
   background-color: steelblue;
 }
 
@@ -10,54 +10,66 @@ body {
 }
 
 .nav__link {
-  /*в макете явный стиль lowercase для ссылок навигации*/
+  /*в макете явный стиль lowercase для ссылок межстраничной навигации*/
   text-transform: lowercase;
 }
 
 .header {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
   padding: 92px 24px 96px;
-  align-items: center;
-  justify-content: space-between;
 }
 
 .header__menu {
-  padding-left: 26px;
+  min-width: 430px;
   padding-top: 5px;
+  padding-left: 27px;
 }
 
 .header__links-list {
   display: flex;
   gap: 32px;
-  list-style: circle;
+  /*мой внутренний перфекционист не вытерпел list-style: circle, кружок там дурацкий (не достаточно круглый 🤪) */
+  list-style: none;
 }
 
 .header__links-item {
+  position: relative;
+}
+
+/* первому элементу списка скрыть маркер, т.к. по сути это визуальный разделитель между элементами, в первом он
+ не нужен никогда (даже если первый стал не активным), хотя это конечно нужно обговорить с дизайнером.*/
+.header__links-item + .header__links-item::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: -18px;
+  width: 7px;
+  height: 7px;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 50%;
 }
 
 .header_link {
+  /* маркер через стили, хотя можно было через svg */
+  border-bottom: 1px rgb(0, 0, 0) solid;
   color: rgb(0, 0, 0);
-  font-size: 18px;
   font-weight: 400;
+  font-size: 18px;
   letter-spacing: 0.01em;
   text-decoration: none;
-  border-bottom: 1px rgb(0, 0, 0) solid;
 }
 
 .header__link_active {
-  letter-spacing: 0;
   border-bottom: 0;
-}
-
-.header__links-item_active {
-  list-style: none;
+  letter-spacing: 0;
 }
 
 .header__logo {
   display: block;
-  width: 148px;
-  height: 106px;
+  width: 136px;
   font-size: 0;
 }
 
@@ -66,4 +78,29 @@ body {
 }
 
 .header__contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 2px;
+  min-width: 430px;
+  padding-top: 5px;
+  padding-left: 165px;
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: 0.01em;
+}
+
+.header__contacts-item {
+  display: block;
+  border-bottom: 1px rgb(0, 0, 0) solid;
+  line-height: 21px;
+  text-decoration: none;
+}
+
+.header__contacts-addr {
+  max-width: 220px;
+  border: 0;
+  line-height: 24px;
+  letter-spacing: 0;
+  word-wrap: anywhere;
 }
