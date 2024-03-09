@@ -60,7 +60,6 @@ body {
 }
 
 .header__link_active {
-  border-bottom: 0;
   letter-spacing: 0;
 }
 
