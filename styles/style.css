@@ -67,6 +67,7 @@
 
 .header__logo-image {
   height: 100%;
+  max-width: 136px;
 }
 
 .header__address {
@@ -197,8 +198,7 @@
 }
 
 .lots {
-  margin-top: 179px;
-  padding: 0 24px 2px;
+  padding: 179px 24px 2px;
 }
 
 .lots__heading {
@@ -294,9 +294,7 @@
   display: grid;
   grid-template-columns: 334px auto;
   gap: 25px;
-  margin-top: 145px;
-  margin-bottom: 59px;
-  padding: 0 24px 0 24px;
+  padding: 145px 24px 59px 24px;
 }
 
 .about__column {
