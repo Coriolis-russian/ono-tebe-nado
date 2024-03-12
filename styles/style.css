@@ -150,7 +150,6 @@
 .aligned-text_center {
   display: block;
   align-self: center;
-  line-height: 125px;
   line-height: 100px;
   text-align: center;
 }
@@ -158,7 +157,6 @@
 .aligned-text_right {
   display: block;
   align-self: end;
-  line-height: 115px;
   line-height: 100px;
   text-align: right;
 }
